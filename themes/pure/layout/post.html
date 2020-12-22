@@ -40,7 +40,7 @@
 <body>
   <nav class="Navbar">
     <a href="index.html">
-      <div class="Navbar__Btn">{{siteMeta.iconHTML}} <span>Home</span></div>
+      <div class="Navbar__Btn">{{siteMeta.iconHTML}} <span>{{siteMeta.title}}</span></div>
     </a>
     {{each(options.siteMeta.pages)}}
     {{if(@this.publish && @this.inMenu)}}
@@ -65,20 +65,23 @@
     <h1 class="Header__Title">{{post.title}}</h1>
         {{if(options.post.date || options.post.tags.length)}}
     <div class="DateTagBar">
-          {{if(options.post.date)}}
-      <span class="DateTagBar__Item DateTagBar__Date">Posted on {{post.dateString}}</span>
-          {{/if}}
-          {{each(options.post.tags)}}
+      <div class="DateTagBar__TagList">
+        {{each(options.post.tags)}}
       <span class="DateTagBar__Item DateTagBar__Tag DateTagBar__Tag--{{@this.color}}">
             <a href="tag/{{@this.value}}.html">{{@this.value}}</a>
           </span>
-          {{/each}}
+        {{/each}}
+      </div>
+          {{if(options.post.date)}}
+            <span class="DateTagBar__Item DateTagBar__Date">Posted on {{post.dateString}}</span>
+          {{/if}}
+        
         </div>
         {{/if}}
   </header>
       {{post.contentHTML}}
   <footer class="Footer">
-        <div>&copy; {{siteMeta.title}} 2019</div>
+        <div>&copy; {{siteMeta.title}} 2020</div>
         <div>&centerdot;</div>
         <div>Powered by <a href="https://github.com/dragonman225/notablog" target="_blank"
             rel="noopener noreferrer">Notablog</a>.

@@ -51,18 +51,24 @@
   --color-pill-red: rgba(255, 0, 26, 0.2);
   --color-ui-hover-bg: rgba(55, 53, 47, 0.08);
   --column-spacing: 46px;
+  --color-snow-primary: rgb(43, 146, 253);
+  --color-snow-bg: rgb(255, 245, 240);
 }
 
 body {
   color: var(--color-text-default);
   fill: currentColor;
-  font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: "Source Sans Pro", -apple-system, "BlinkMacSystemFont",
+    "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin: 0;
+  background-color: var(--color-snow-bg);
 }
 
 code {
   /* Use monospace before Courier so font looks better on Android Chrome. */
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace, Courier;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace,
+    Courier;
 }
 
 p {
@@ -99,7 +105,7 @@ p {
   background: var(--color-ui-hover-bg);
 }
 
-.Bookmark>a {
+.Bookmark > a {
   color: inherit;
   text-decoration: none;
 }
@@ -193,7 +199,7 @@ pre.Code code {
 
 /* Collection */
 
-.CollectionInline>h3 {
+.CollectionInline > h3 {
   line-height: 1.75;
   font-size: 1.25rem;
   font-weight: 700;
@@ -202,7 +208,7 @@ pre.Code code {
   padding: 3px 2px;
 }
 
-.CollectionInline>h3:hover>.Anchor {
+.CollectionInline > h3:hover > .Anchor {
   visibility: visible;
 }
 
@@ -210,7 +216,7 @@ pre.Code code {
   overflow-x: auto;
 }
 
-.Table>table {
+.Table > table {
   width: 100%;
   font-size: 0.875rem;
   /* No double border */
@@ -221,7 +227,8 @@ pre.Code code {
   margin-bottom: 10px;
 }
 
-.Table>table td, .Table>table th {
+.Table > table td,
+.Table > table th {
   /* For <th> and unknown <td> */
   padding: 0 8px;
   height: 2rem;
@@ -230,15 +237,17 @@ pre.Code code {
   word-break: break-word;
 }
 
-.Table>table td:first-child, .Table>table th:first-child {
+.Table > table td:first-child,
+.Table > table th:first-child {
   border-left: none;
 }
 
-.Table>table td:last-child, .Table>table th:last-child {
+.Table > table td:last-child,
+.Table > table th:last-child {
   border-right: none;
 }
 
-.Table>table th {
+.Table > table th {
   text-align: left;
   font-weight: normal;
   color: var(--color-text-default-light);
@@ -246,13 +255,13 @@ pre.Code code {
   width: 200px;
 }
 
-.Table__CellTitle>a {
+.Table__CellTitle > a {
   color: inherit;
   text-decoration: none;
   border-bottom: 2px solid hsl(45, 8%, 85%);
 }
 
-.Table__CellTitle>a:hover {
+.Table__CellTitle > a:hover {
   border-bottom: 2px solid hsl(45, 8%, 55%);
 }
 
@@ -270,7 +279,7 @@ pre.Code code {
   padding: 6px 8px;
 }
 
-.Table__CellCheckbox>div {
+.Table__CellCheckbox > div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,7 +315,8 @@ pre.Code code {
 }
 
 .Gallery__Item {
-  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px,
+    rgba(15, 15, 15, 0.1) 0px 2px 4px;
   border-radius: 5px;
   transition: background 120ms ease-in 0s;
   position: relative;
@@ -318,7 +328,7 @@ pre.Code code {
   background: rgba(55, 53, 47, 0.03);
 }
 
-.Gallery__Item>a {
+.Gallery__Item > a {
   color: inherit;
   text-decoration: none;
 }
@@ -344,7 +354,7 @@ pre.Code code {
   height: 200px;
 }
 
-.Gallery__Item__Cover>img {
+.Gallery__Item__Cover > img {
   width: 100%;
   height: 100%;
   max-height: 200px;
@@ -354,7 +364,7 @@ pre.Code code {
   padding-bottom: 1px;
 }
 
-.Gallery__Item__Cover--Contain>img {
+.Gallery__Item__Cover--Contain > img {
   object-fit: contain;
 }
 
@@ -523,7 +533,7 @@ pre.Code code {
   margin: 0 auto;
 }
 
-.Embed__ResponsiveContainer>iframe {
+.Embed__ResponsiveContainer > iframe {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -549,7 +559,7 @@ pre.Code code {
   text-decoration: none;
 }
 
-.File>div {
+.File > div {
   display: flex;
   padding: 5px 0;
   margin: 2px 0;
@@ -557,7 +567,7 @@ pre.Code code {
   transition: background 120ms ease-in 0s;
 }
 
-.File>div:hover {
+.File > div:hover {
   background: var(--color-ui-hover-bg);
 }
 
@@ -586,7 +596,7 @@ pre.Code code {
   padding: 3px 2px;
 }
 
-.Heading:hover>.Anchor {
+.Heading:hover > .Anchor {
   visibility: visible;
 }
 
@@ -618,7 +628,7 @@ pre.Code code {
   color: #888;
 }
 
-.Column>.Heading:first-child {
+.Column > .Heading:first-child {
   margin-top: 2px;
 }
 
@@ -643,7 +653,8 @@ pre.Code code {
   width: calc(100vw - 15px);
 }
 
-.Image--Normal, .Image--PageWidth {
+.Image--Normal,
+.Image--PageWidth {
   max-width: 100%;
 }
 
@@ -655,32 +666,34 @@ pre.Code code {
   width: 100%;
 }
 
-.Image>figure {
+.Image > figure {
   margin: 0;
 }
 
-.Image>figure>figcaption {
+.Image > figure > figcaption {
   color: var(--color-text-default-light);
   font-size: 0.875rem;
   text-align: left;
 }
 
-.Image--FullWidth>figure img {
+.Image--FullWidth > figure img {
   /* 15px is scrollbar */
   width: calc(100vw - 15px);
   object-fit: cover;
 }
 
-.Image--FullWidth>figure>figcaption {
+.Image--FullWidth > figure > figcaption {
   padding: 6px 26px;
 }
 
-.Image--Normal>figure img, .Image--PageWidth>figure img {
+.Image--Normal > figure img,
+.Image--PageWidth > figure img {
   max-width: 100%;
   object-fit: contain;
 }
 
-.Image--Normal>figure>figcaption, .Image--PageWidth>figure>figcaption {
+.Image--Normal > figure > figcaption,
+.Image--PageWidth > figure > figcaption {
   padding: 6px 2px;
 }
 
@@ -714,7 +727,7 @@ pre.Code code {
   text-decoration: none;
 }
 
-.Page>div {
+.Page > div {
   display: flex;
   padding: 3px 0;
   margin: 2px 0;
@@ -722,7 +735,7 @@ pre.Code code {
   transition: background 120ms ease-in 0s;
 }
 
-.Page>div:hover {
+.Page > div:hover {
   background: var(--color-ui-hover-bg);
 }
 
@@ -745,7 +758,7 @@ pre.Code code {
   text-align: center;
 }
 
-.PDF__Content>embed {
+.PDF__Content > embed {
   max-width: 100%;
 }
 
@@ -811,11 +824,11 @@ pre.Code code {
 
 .Quote {
   background: var(--color-bg-gray-light);
-  border-left: 5px solid currentcolor;
+  border-left: 5px solid var(--color-snow-primary);
   border-radius: 5px;
   margin: 0.5rem 0;
   padding: 0.5em 0.9em;
-  font-size: 1.2em;
+  font-size: 0.95em;
 }
 
 /* SemanticStringArray */
@@ -826,13 +839,15 @@ pre.Code code {
   word-break: break-word;
 }
 
-.SemanticString__Fragment--Link, .SemanticString__Fragment--Resource>a {
-  color: inherit;
+.SemanticString__Fragment--Link,
+.SemanticString__Fragment--Resource > a {
+  color: var(--color-snow-primary);
   text-decoration: none;
   border-bottom: 2px solid hsl(45, 8%, 85%);
 }
 
-.SemanticString__Fragment--Link:hover, .SemanticString__Fragment--Resource>a:hover {
+.SemanticString__Fragment--Link:hover,
+.SemanticString__Fragment--Resource > a:hover {
   border-bottom: 2px solid hsl(45, 8%, 55%);
 }
 
@@ -845,7 +860,8 @@ pre.Code code {
   word-break: break-word;
 }
 
-.SemanticString__Fragment--HighlightedBg, .SemanticString__Fragment--HighlightedColor {
+.SemanticString__Fragment--HighlightedBg,
+.SemanticString__Fragment--HighlightedColor {
   background-color: inherit;
 }
 
@@ -944,7 +960,9 @@ pre.Code code {
   border-bottom: 2px solid rgb(255, 212, 0);
 }
 
-.SemanticString__Fragment--Individual, .SemanticString__Fragment--Resource, .SemanticString__Fragment--Date {
+.SemanticString__Fragment--Individual,
+.SemanticString__Fragment--Resource,
+.SemanticString__Fragment--Date {
   color: var(--color-text-default-light);
 }
 
@@ -967,12 +985,12 @@ pre.Code code {
   background: var(--color-ui-hover-bg);
 }
 
-.TableOfContents__Item>a {
+.TableOfContents__Item > a {
   color: inherit;
   text-decoration: none;
 }
 
-.TableOfContents__Item>a>div {
+.TableOfContents__Item > a > div {
   padding: 4.5px 2px;
 }
 
@@ -1032,7 +1050,7 @@ pre.Code code {
   background: rgb(46, 170, 220);
 }
 
-.IconCheckboxChecked>svg {
+.IconCheckboxChecked > svg {
   width: 0.75em;
   height: 0.75em;
   fill: white;
@@ -1042,7 +1060,7 @@ pre.Code code {
   display: flex;
 }
 
-.IconCheckboxUnchecked>svg {
+.IconCheckboxUnchecked > svg {
   width: 1em;
   height: 1em;
   fill: inherit;
@@ -1083,11 +1101,11 @@ pre.Code code {
   height: calc(1.2em + 2px);
 }
 
-.Toggle--Empty>.Toggle__Summary::before {
+.Toggle--Empty > .Toggle__Summary::before {
   opacity: 0.5;
 }
 
-.Toggle[open]>.Toggle__Summary::before {
+.Toggle[open] > .Toggle__Summary::before {
   content: "\025BE";
 }
 
