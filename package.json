@@ -8,6 +8,6 @@
   "scripts": {
     "build" : "notablog generate .",
     "deploy" : "git push",
-    "test" : "git add . && export timestamp=`date +'%Y-%m-%dT%H-%M-%S'` && git commit -m  '${timestamp}'"
+    "test" : "git add . && export timestamp=`date +'%Y-%m-%dT%H-%M-%S'` && git commit -m  ${timestamp}"
   }
 }
