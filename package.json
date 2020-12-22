@@ -1,0 +1,13 @@
+{
+  "name": "notion-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/snowjang24/notion-blog.git",
+  "author": "snowjang24 <asdka4618@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build" : "notablog generate .",
+    "deploy" : "git push",
+    "test" : "git add . && export timestamp=`date +'%Y-%m-%dT%H-%M-%S'` && git commit -m  '${timestamp}'"
+  }
+}
